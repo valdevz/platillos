@@ -1,0 +1,30 @@
+<mat-card *ngIf="meal" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{meal.strMeal}}</mat-card-title>
+      <mat-card-subtitle>Categoría: {{meal.strCategory}}</mat-card-subtitle>
+      <mat-card-subtitle>Zona: {{meal.strArea}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="split-screen">
+        <img mat-card-image src="{{meal.strMealThumb}}" alt="Photo of a Shiba Inu">
+        <p class="instructions"><strong>Instrucciones:</strong><br>{{meal.strInstructions}}</p>
+    </div>
+    <mat-card-content>
+      <br>
+      <p><strong>Ingredientes:</strong><br></p>
+        <ol>
+            <li *ngFor="let item of ingredients">{{item}}</li>
+        </ol>
+        <br>
+        <p><strong>Medidas:</strong><br></p>
+        <ol>
+            <li *ngFor="let item of mesures">{{item}}</li>
+        </ol>
+        <br>
+    </mat-card-content>
+    <mat-card-actions>
+        <p><strong>Fuente original:</strong><br><a target="_blank" href="{{meal.strSource}}">{{meal.strSource}}</a></p>
+        <p><strong>Video de la preparación:</strong><br><a target="_blank" href="{{meal.strYoutube}}">{{meal.strYoutube}}</a></p>
+    </mat-card-actions>
+  </mat-card>
+  

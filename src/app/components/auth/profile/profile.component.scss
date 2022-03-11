@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png');
+    background-size: cover;
+  }
+  
+  .actions {
+    text-align: right;
+    .mat-button-base {
+      margin-top: 16px;
+    }
+  }

@@ -1,0 +1,12 @@
+<div class="container">
+  <mat-card *ngFor="let ingredient of topIngredients| keyvalue;  index as key" class="example-card">
+      <mat-card-title>{{ingredient.value.strIngredient}}</mat-card-title>
+      <mat-card-subtitle>{{key+1}}</mat-card-subtitle>
+      <mat-card-content>
+        <p>{{ingredient.value.strDescription | slice:0:400}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button routerLink="/meal-by-ingredient/{{ingredient.value.strIngredient}}" mat-button color="primary">Ver platillos con este ingrediente</button>
+      </mat-card-actions>
+    </mat-card>
+</div>
