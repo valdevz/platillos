@@ -24,7 +24,6 @@ export class AuthService {
   }
   login( username: string, password : string) : Observable<any> {
     if(username === 'user' && password === 'root'){
-      console.log('Se lofró')
       return of({
         isLoggedIn : true, 
         accesToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvcmdlIFZhbGRleiIsImlhdCI6MTUxNjIzOTAyMn0.qurL_618TvgOCcL8a9wzc2N7zS5cnS7PRs6Z8uAzRGA',
@@ -32,7 +31,6 @@ export class AuthService {
         email : 'jorge.valdez@globant.com',
       })
     }else {
-      console.log('no pasa el login')
       return of(false)
     }
   }

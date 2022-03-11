@@ -18,7 +18,6 @@ export class MealByIngredientComponent implements OnInit {
   
   getIngredientId(): string {
     let ingredient = this.route.snapshot.paramMap.get('id') || ''
-    console.log(ingredient)
     return ingredient;
   }
 
@@ -29,7 +28,6 @@ export class MealByIngredientComponent implements OnInit {
         if(data.meals){
           this.meals = data.meals;
         }
-        console.log(data)
       },
       error: err => console.log(err)
     })

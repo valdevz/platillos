@@ -33,7 +33,6 @@ export class MealDetailsComponent implements OnInit {
           this.setIngredients(this.meal);
           this.setMesures(this.meal)
         }
-        console.log(this.meal)
       },
       error: err => console.log(err)
     })

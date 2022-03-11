@@ -32,7 +32,7 @@ export class MealsService {
   }
   
   getMealByCategoryFilter(category : string) : Observable<any>{
-    return this.https.get(URI_API + 'lookup.php?c=' + category);
+    return this.https.get(URI_API + 'filter.php?c=' + category);
   }
 
   getMealByAreaFilter(area : string) : Observable<any>{

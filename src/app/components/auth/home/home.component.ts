@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
         if(this.meal){
           this.simpleAlert();
         }
-        console.log(this.meal)
       },
       error: err => this.error = err
     })
